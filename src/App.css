@@ -1,0 +1,25 @@
+.fixed {
+  position: sticky;
+  top: 20px;  /* Khoảng cách từ top, có thể điều chỉnh */
+  height: calc(100vh - 40px); /* Chiều cao tự động điều chỉnh theo viewport */
+  overflow-y: auto; /* Cho phép cuộn nếu nội dung dài */
+}
+
+/* Thêm một số style để đảm bảo layout đẹp */
+.fixed .card {
+  display: flex;
+  flex-direction: column;
+}
+
+.fixed .card .d-flex {
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
+}
+
+@media (max-width: 991px) {
+  .fixed {
+    position: static;
+    height: auto;
+  }
+}
